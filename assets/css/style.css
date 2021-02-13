@@ -1,0 +1,541 @@
+* {               /*знак"*"обозначает что задаем стиль для всех элементов*/
+	margin: 0; /*внешний отступ равен 0*/
+	padding: 0; /*внутренний  отступ равен 0*/
+}
+
+body {                        /*стили для всей страницы, размер шрифта,фона в одном из главных элементов html body*/
+	font-size: 1.2em;          /*размер шрифта*/
+	background-color: #fff;    /*цвет фота*/
+	color: #555;              /*цвет шрифта*/
+}
+
+p {                             /*задаем стиль для параграфа*/
+	padding: 0 0 20px 0;        /*внутренний отступ*/
+	line-height: 1.7em;         /*свойство устанавливает высоту у всей строки текста*/
+}
+
+input[type="text"], input[type="password"], input[type="search"] {  /*стили для input  text,password,search для первого блока*/
+	color: #5d5d5d;  /*цвет input*/
+	width: 60%;    /*ширина*/
+	padding: 8px;  /*внутренний отступ*/
+}
+
+input, textarea {  /*стили для input,textarea*/
+	outline: none;  /*новый стиль не влияет на ширину элемента */
+	border: none;  
+	border: solid 1px #f2f2f2; /*цвет*/
+}
+
+h1,  h2 {                                         /*стили для всех заголовков с правой стороны*/
+	font: normal 170% 'century gothic', arial;     /*стиль шрифта,*/
+	margin: 0 0 15px 0;                           /*внешний отступ*/
+	padding: 15px 0 5px 0;                        /*внутренний отступ*/
+	color: #000;                                  /*цвет шрифта*/
+}
+
+h2 {                                 /*стиль здя заголовка 2 уровня*/
+	font-size: 140%;                /*размер шрифта*/
+}
+
+a, a:hover {   /*задаем стили цвета для всех ссылок в блоке*/
+	outline: none;  /*задает внешнию границу вокруг элемента в данном случае ее нет*/
+	text-decoration: underline;  /*свойство делает подчеркивающими ссылки*/
+	color: #aeb002;  /*цвет ссылка*/
+}
+
+ul {                         /*стандартный стиль для ul*/
+	margin: 2px 0 22px 17px; /*внеший отступ*/
+}
+
+ul li {                    /*стандартный стиль для ul li*/
+	margin: 0 0 6px 0;      /*внешний отступ*/
+	padding: 0 0 4px 5px;   /*внутренний отступ*/
+	line-height: 1.5em;
+}
+
+.header {                                /*стиль для верхнего блока сайта*/
+	background-color: darkslateblue;   /*этот стиль задает цвет фона*/
+	height: 177;              /*это высота div=class"header"*/
+	font-size: 0.8em;       /*размер шрифта*/
+	margin-left: 0px;      /* вннешний отступ слева*/
+	margin-right: 0px;     /*внешний отступ справа*/
+	min-width: 900px;      /*минимальная ширина*/
+
+}
+
+.main, .logo, .menubar, .site_content, .footer {     /*в css можно задавь стили сразу к нескольким классам */
+	margin-left: auto;   /* это свойство автоматом рачитывается браузером */
+	margin-right: auto;  /*это свойство автоматом расчитывается браузером*/
+}
+
+
+.logo {   /*стиль для div class=logo*/
+	width: 880px;   /*ширина этого div*/
+	padding-bottom: 40px;  /*это внутренний отступ снизу от элемента*/
+
+}
+
+.logo h1, .logo h2 {  /*стили для заголовка и подписи*/
+	font: normal 300% 'century gothic',arial, sans-serif;  /*задаем шрифт*/
+	margin: 0 0 0 9px;   /*внешний отступ*/
+}
+
+.logo_text h1, .logo_text h1 a, .logo_text h1 a:hover {  /*стиль для div class=logo_text, но и для ссылок с тегом А*/
+	padding: 22px 0 0 0;   /*внутренний отступ*/
+	color: #fff;     /*цвет шрифта*/
+	letter-spacing: 0.1em;  /*это свойство интервал между символами чем выше значение тем больше интервал между символами */
+	text-decoration: none;  /*это свойство служит для стилизации тега ссылки А*/
+
+}
+
+.logo_text h2{    /*стиль для заголовка или подписи */
+	font-size: 0.9em;  /*шрифт*/
+	padding: 4px 0 0 0;  /*внутренний отступ*/
+	color: #999;   /*цвет шрифта*/
+
+}
+
+.menubar {    /*создаем стили для меню div class=menubar*/
+	width: 930px; /*ширина*/
+	height: 46px  /*высота*/
+}
+
+ul.menu {         /*стиль для ul class=menu*/
+	float: right;  /*это свойство прижимат элемент к правому краю*/
+}
+ul.menu li {  /*это свойтство для ul.meun li*/
+	float:left;  /*это свойство прижимает элемент к левому краю*/
+	padding: 0 0 0 9px;  /*внутренний отступ*/
+	list-style: none;   /*это свойство относиться к маркированному списку, это свойство убирает точки перед каждым элементом маркированного списка*/
+	margin: 1px 2px 0 0;  /*внешний отступ*/
+}
+
+ul.menu li a {  /*свойство для меню и для ссылок внутри тегов li*/
+	font: normal 100% 'trebuchet ms', sans-serif;  /*шрифт,*/
+	display: block;  /*новое свойсво которое делает из неблочного элемента в блочный*/
+	height: 20px;  /*высота*/
+	padding: 6px 35px 5px 28px;  /*внутренний отступ*/
+	color: #fff;   /*цвет шрифта*/
+	text-decoration: none;  /*новое свойство убирает подчеркивание ссылок*/
+
+}
+
+ul.menu li.selekted a {   /*стиль для постоянного выделения ссылки*/
+	color: #aeb002;       /*цвет ссылки*/
+}
+                  
+ul.menu li a:hover {  /*стиль для изменения цвета когда наводишь на ссылку*/
+	color:#e4ec04;      /*цвет ссылки*/
+} 
+
+hr {                              /*стиль для тега hr в div class="posts*/
+	border: solid 1px #f3f3f3;    /*толщина и цвет*/
+}
+
+
+
+.site_content {  /*стиль для div class=site_content*/
+	width: 880px;  /*ширина*/
+	overflow: hidden;  /*это свойстов которое скрывает контент который выходит за рамки заданного размера*/
+	margin: 20px auto 0 auto;  /*внешний отступ*/
+	background-color: white;   /*фононый цвет белый*/
+}
+
+.sidebar_container {  /*стиль для div class=sidebar_container*/
+	float: right;;    /*шрифт*/
+	width: 224px;    /*ширина */
+}
+
+.sidebar {         /*стиль для div class=sidebar*/
+	float: right;  /*шрифт*/
+	width: 222px;  /*ширина*/
+	padding: 5%;   /*внутренний отступ*/
+	margin: 0 0 16px 0;  /*внешинй отступ*/
+	border: solid 1px #f2f2f2;  /*новое свойство которое устанавливает рамку вокруг стиля,свойство 1px задает толщину рамки */
+	border-radius: 5px;          /*новое свойство которе делает углы закругленными*/
+	background-color: #f9f9f9;  /*цвет фона*/
+}
+
+.btn {                             /*стиль для class=btn*/
+	padding: 8px;         /*внутрений отступ */
+	background-color: white;  /*цвет кнопки белый*/
+	cursor: pointer;     /*новое свойство изменяет курсор при наведении на кнопку*/
+}
+
+.sidebar h2 {           /*стиль для правого блока*/
+	color: #136cb2;     /*цвет*/
+}
+
+.lables_passreg_text { /*стиль для ссылок забили пароль и регистрация*/
+	font-size: 0.7em; 
+	margin-top: 3%;
+	margin-left: 2%;
+
+}
+
+ .sidebar ul {  /*стидь для sidebar ul для маркированного списка рейтинг фильмов*/
+	margin: 0;
+}
+ 
+ .sidebar ul li {           /*стиль для sidebar ul li что находиться под рейтинг фильмов */
+	list-style-type: none;   /**/
+	margin: 0 0 0 0;
+}
+
+ .sidebar .rating_sidebar {   /*стиль для rating_sidebar что находиться в рефтигне фильмов*/
+	float: right;
+}
+
+.content {             /*стиль для div class="content*/
+	text-align: left;  /*весь текс будет распологаться с левой стороны*/
+	width: 620px;      /*ширина*/
+	padding: 0 0 0 5px;  /*внутренний отступ*/
+	float: left;    /*прижимание с левой стороны*/
+}
+
+.content a {                    /*стиль ссылки для content*/
+	text-decoration: none;     /*прижимание нет*/
+}
+
+.films_block {             /*стиль для div class="films_block*/
+	margin-bottom: 5%;     /*внешний отступ с низу*/
+}
+
+.films_block img {            /*стиль для картинок в div class=films_block*/
+	border-radius: 5px;          /*закругление рамки*/
+	border: solid 5px #dad7d5;   /*толщина рамки и цвет*/
+	width: 22%;                   /*ширина*/
+}
+
+
+.posts .posts_content {  /*стиль для всех div class="posts_content*/
+	font-size: 0.8em;   /*размер шрифта*/
+}
+
+.info_film_page {       /* стиль для div class="info_film_page*/
+	margin-top: 2%;     /*внешний отступ впереди*/
+	margin-bottom: 4%;  /*внешний отступ снизу*/
+
+}
+
+ .info_film_page .label {   /*стиль для span class="lable в div class=info_film_page*/
+  font-size: 1.2em;        /*размер шрифта*/
+
+}
+
+.info_film_page .value {   /*стиль для span class="value в div class=info_film_page*/
+	font-size: 1em;      /*размер шрифта*/
+	color: #49945a;    /*цвет шрифта*/
+	margin-right: 3%;   /*внешний отступ справа*/
+}
+
+.description_film {            /*стиль для div class=description_film*/
+	margin-bottom: 15%         /*внешний отступ снизу*/
+} 
+
+.description_film img {      /*стиль для картинки котрая находиться в div class=description_film*/
+	float: left;             /*прижимание к левому краю*/
+	margin-right: 2%;        /*внешний отступ с права*/
+	border-radius: 5px;      /*закргуление рамки*/
+	border: solid 5px #dad7d5;  /*рамкка, тольщина и цвет*/
+}
+
+.reviews {                  /*стили для div class=reviews*/
+	margin-bottom: 4%;      /*внешний отступ снизу*/
+	font-size: 0.9em;       /*размер шрифта*/
+}
+
+.reviews .review_name {      /*стиль для div class="reviews и div class=review_name*/
+background-color: #7268ad;   /*фон цвета*/
+color:white;                  /*цвет*/
+padding: 1%;                  /*внутренний отступ*/
+border-top-left-radius: 5px;   /*задаем скругление с верху с левой стороны*/
+border-top-right-radius: 5px;  /*задаем скругление с верху с правой стороны*/
+}
+
+.reviews .review_text {         /*стиль для div class=reviews_text*/
+	padding-top: 2%;            /*внутренний отступ с верху*/
+	padding-bottom: 2%;         /*внутренний отступ снизу */
+	padding-left: 2%;           /*внутренний отступ с лева*/
+}
+
+.send {                                  /*стиль для div class="send*/
+	margin-bottom: 4%;                   /*внешний отступ снизу*/
+}
+
+.send input[type="text"], textarea {    /*стиль для send input,*/
+	border: solid 1px #c3c3c3;          /*толщина рамки ,цвет */
+	margin-bottom: 2%;                  /*внешний отступ с низу*/
+}
+
+.send input[type="text"] {              /*отдельно сделаем стиль для  send input[type="text"*/
+	width: 98%;                         /*ширина */
+}
+
+.send textarea {                        /*стиль для  send textarea */
+	width: 624px;                       /*ширина*/
+	height: 200px;                       /*высота*/
+}
+
+
+.send input[type="submit"] {            /*задаем стиль для кнопки send input[type="submit" */
+	background-color: #7268ad;          /*цвет фота*/
+	padding: 3%;                        /*внутренний отступ*/
+	color: white;                       /*цвет*/
+	border-radius: 5px;                 /*закругление  углов у рамки*/
+}
+
+.send_contact input[type="text"] {     /*стиль для  send_contact input[type="text"*/
+  width: 500px;                        /*ширина*/
+} 
+ 
+.send_contact textarea {             /*стиль для send_contact textarea*/
+  width: 516px;                      /*ширина*/
+}
+
+.info_film {                        /*задаем стили для div class="info_film"*/
+	margin-bottom: 5%;              /*внешний отступ с низу*/
+	background: #f9f9f9;            /*цвет фона*/
+	padding: 5%;                    /*внутренний отступ*/
+	height: 270px;                  /*высота*/
+}
+
+.info_film img {                   /*задаем стили для картинки*/
+	float: left;                   /*делаем с левой стороны*/
+	margin-right: 2%;              /*внешний отступ с правой стороны*/
+	border-radius: 5px;            /*скругление рамки вокруг картинки*/
+	border: solid 5px #dad7d5;     /*толщина рамки и цвет*/
+	width: 25%;                    /*штрина*/
+}
+
+.button {                           /*создаем стиль для div class="button для кнопки*/
+	background-color: #7268ad;      /*фоновый цвет кнопки*/
+	padding: 2%;                    /*внутренний отступ*/
+	color: white;                   /*цвет текста кнопки белый*/
+	border-radius: 5px;             /*слругление углов*/
+	float: right;                   /*прижимаем  кнопку  спроавой стороны*/
+	margin-top: 5%;                 /*внешний отступ с верху*/
+	clear: both;                     /*новое свойство запрещает обтикание с правой или с левой стороны*/
+	font-size: 0.8em                 /*размер шрифта*/
+}
+
+.button a {                          /*стиль для ссылки*/
+	color: white;                    /*цвет ссылки*/
+}
+
+
+table {                             /*напишем стиль для нашей таблицы*/
+	width: 100%;                   /*ширина */
+	border: solid 1px #f4f4f4;     /*толщина рамки и цвет*/
+
+}
+
+
+td {                            /*создаем стиль для td что находиться в table*/
+	padding: 2%;                 /*внутренний отступ*/
+	border: solid 1px #f4f4f4;      /*толщина рамки и цвет*/
+}
+
+
+td img {                         /*создаем стиль для картники которая находиться  в table*/
+	width: 60px;                /*ширина */
+	vertical-align: middle;     /*новоес свойство */
+}
+
+
+.center {                      /*это свойство умеет выравнивать по центру*/
+	text-align: center;        /*делает текст по центру*/
+
+}
+
+
+.rating {                     /*стиль для рейтинга что находиться  в таблице*/
+	font-weight: bold;        /* это свойтво делаем жирный шрифт*/
+}
+
+
+
+.footer {                        /*стиль для div class=footer,нижней части сайта */
+	width: 100%;                /*ширина*/
+	height:100px;                /*высота*/
+	padding: 28px 0 5px 0;       /*внутренний отступ*/
+	text-align: center;          /*свойство которое размещает элемент по центру*/
+	background-color: darkslateblue;   /*фон текста */
+	color: #a8aa94;             /*фон шрифта*/
+	margin-left: 0px;         /*внешний отступ слева*/
+	margin-right: 0px;       /*внешний отступ с права*/
+	min-width: 900px;        /*минимальная длина*/
+}
+
+.footer a {                  /*стиль для ссылок нижнего блока*/
+	color:#a8aa94;           /*цвет ссылок*/
+	text-decoration: none;   /*свойство служит для стилизации ссылок*/
+}
+
+.footer  {     /*псевдокласс*/
+	color:#fff;      /*цвет белый*/
+	text-decoration: none; /*свойтсов служит для стилизации ссылок*/
+}
+
+.footer p {   /*стиль для параграфа для нижнего блока, сайта*/
+	padding: 0 0 10 0;  /*внутренний отступ*/
+}
+
+
+/*CSS Mobile*/
+
+@media only screen             /* эти стили буду рабтать только в мобильных устройствах*/           
+and (min-device-width : 320px)  /*минимальный размер экрана ширина */
+and (max-device-width : 568px) {  /*масксимальный размер экрана ширина*/
+
+ .header {                        /* стили для мобильных устройств*/
+ 	    background-color: #257965;  /*цвет фона*/
+ 	    min-width: 100%;   /*ширина*/
+ 	    height: 20%;    /*высота*/
+ 	    text-align: center;    /*текст по центру*/
+ }
+
+
+.logo {               /*мобильный  стиль для класса div class="logo */
+	width: 100%;     /*ширина*/
+}
+
+.site_content {   /*мобильный стиль для div class="site_content*/
+	width: 100%;  /*ширина*/
+}
+
+.menubar {      /*мобильный стиль для div class="menubar*/
+width: 100%;    /*ширина*/
+height: 100%;   /*высота*/
+}
+
+.content {         /*мобильный стиль для div class="content в которм есть div class="films_block еде хранятся картинки*/
+	width: 100%;          /*ширина*/
+   	text-align: center;   /*все картинки встали по центру*/
+} 
+
+.site_content {    /* мобильный стиль для div class="site_content"*/
+	width: 100%;  /*ширина*/
+	text-align: center; /*текст только по центру*/
+}
+
+.sidebar_container {   /*мобильный стиль для div class="sidebar_container*/
+	display: none;    /*новое свойство скрывает элемент любой*/
+}
+
+.footer {           /*мобильный стиль для div class="footer*/
+	display: none;  /*свойство скрывает любой элемент*/
+}
+
+ul.menu {           /*мобильный стиль для ul class="menu*/
+	float: none;    /*свойтство обозначает не куда не прижимать значение оставить по центу*/
+}
+
+ul.menu li {          /*мобильный стиль для menu li что находиться в ul class="menu*/
+	margin: 0;  /*внешний отступ отменен*/
+	padding: 0; /*внутренний отстут отменен*/
+	float: none; /*прижимания нет*/
+}
+
+.logo h1 {                                                        /*мобильный стиль для залоловка h1 в div class="logo*/
+	font: normal 235% 'century gothic', arial, sans-serif;        /*шрифт нормальный большой 235%, название шрифта */
+}
+
+.logo h2 {                                                      /*мобильный стиль для залоловка h2 в div class="logo*/
+	font: normal 100% 'century gothic', arial, sans-serif;     /*шрифт нормальный уже 100%*/
+	color: #f1ecec;                                            /*цвет шрифта*/
+}
+
+.content h1, h2 {                                            /*мобильные стили для div class="site_content в которм содержится залоговок первого и второго уровня*/
+	font: normal 110% 'century gothic', arial;              /*размер шрифта */
+}
+
+.films_block img {                                           /*мобильный стиль для div class="films_block*/
+	width: 43%;                                              /*ширина*/
+
+}
+
+.posts_content p {                   /*мобильный стиль для div class="posts_content с параграфом*/
+	line-height: 1.5em;             /*высота */
+	padding: 3%;                   /*внутренний отступ*/
+	text-align: left;             /*текст с лева отменет*/
+}
+
+
+.posts p {                           /*мобильный стиль для всех параграфов*/
+	font-size: 120%;                 /*размер шрифта*/
+
+
+.info_film {                        /* мобильный стиль для страницы films html*/
+	float: none;                   /*прижиманий нет */
+	height: 100%;                 /*высота*/
+}
+ 
+.info_film img {                       /*мобильный стиль для стриницы в которм есть картинки */
+	width: 900%;                        /*ширина */
+	margin-bottom: 5%;                  /*внешний отступ снизу*/
+
+}
+
+
+.button {        /*мобильный стиль для div class="button */
+	float: none;   /*свойство скрывает любой элемент */
+}
+
+
+.table {                  /*делаем страницу для рейтинга фильмов,rating page*/
+   	display: block;       /*делает из неблочного элемента в блочный*/
+}
+
+th {                   /*задаем стиль для заголовков нашей таблицы*/
+	font-size: 75%;   /*размер шрифта*/
+ 
+td {                  /*задаем стиль для данных в таблице*/
+	padding: 0;      /*внутренний отступ равен 0*/
+	margin: 0;       /*внешний отступ равен 0*/
+	font-size: 95%;  /*размер шрифта*/
+	text-align: left;  /*текст с левой стороны*/
+}
+
+
+                         
+
+iframe {           /*делаем мобильную  верству для самих фильмов в show.html,show page  для плеера */
+	width: 88%;     /*ширина*/
+	height: 100%;   /*высота*/
+} 
+
+.description_film {     /*делаем мобильную верстку для блока с div class="description_film*/  
+width: 90%;             /*ширина*/
+text-align: left;       /*текст у нас прижимается к левому краю*/
+margin-left: 2%;        /*внешний отступ */
+}
+
+.description_film img {   /*задаем мобильную верстку для картинки в div class="description_film*/
+	float: none;          /*нет ни каких прижиманий*/
+	width: 73%;           /*ширина*/
+    display: block;       /*делаем из блочного элемента не блочный*/
+    margin: 0;            /*внешний отступ равен 0*/
+    padding: 0;           /*внутренний отступ равен 0*/
+    margin-left: 11%;     /*внешний отступ с левой стороны*/
+    margin-bottom: 7%;    /*внешний отступ с нижней стороны*/
+}
+
+
+
+.reviews {             /*делаем мобильную вертку для отзывов в review, review page*/ 
+ text-align: left;     /*тектс с левой стороны*/
+ width: 96%;           /*ширина*/
+}
+
+
+.send input[type="text"] {           /*делаем мобильную верстку для отправки сообщений .send input, input page*/
+	width: 80%;                      /*ширина*/
+} 
+
+.send textarea {          /*делаем мобильную верстку для div class="send */
+ width:  85%;             /*ширина*/
+}
+
+}
+
